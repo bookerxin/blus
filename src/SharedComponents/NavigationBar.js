@@ -16,7 +16,7 @@ import NavbarCollapse from "react-bootstrap/NavbarCollapse";
 import DropdownItem from "react-bootstrap/DropdownItem";
 
 const NavigationBar = () => {
-    const [count, setCount] = useState(0);
+    const [time, setTime] = useState(0);
 
     return (
         <Container>
@@ -32,7 +32,7 @@ const NavigationBar = () => {
                                 </Nav>
                             </Container>
                         </Col>
-                        <Col className='col-2'>
+                        <Col className='col-1'>
                             <NavbarCollapse aria-controls='basic-dropdown'>
                                 <NavDropdown className='' id='basic-dropdown' title='Worlds'>
                                     <DropdownItem href='#'>Test World</DropdownItem>
@@ -40,6 +40,9 @@ const NavigationBar = () => {
                                     <DropdownItem href='#'>World of Goo</DropdownItem>
                                 </NavDropdown>
                             </NavbarCollapse>
+                        </Col>
+                        <Col className='col-1'>
+                            <Nav>{time}</Nav>
                         </Col>
                     </Container>
                 </Navbar>
@@ -50,3 +53,6 @@ const NavigationBar = () => {
 
 // Default export removes the need for {}
 export default NavigationBar;
+
+// TODO - Add clock in top right
+// TODO - Play more with the styles; learn Bootstrap
