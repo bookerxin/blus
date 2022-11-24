@@ -16,7 +16,13 @@ import NavbarCollapse from "react-bootstrap/NavbarCollapse";
 import DropdownItem from "react-bootstrap/DropdownItem";
 
 const NavigationBar = () => {
-    const [time, setTime] = useState(0);
+    const [time, setTime] = useState(new Date().toTimeString().split(' ')[0]);
+
+    const timerId = setInterval(
+        () => {
+            setTime(new Date().toTimeString().split(' ')[0])
+        }, 1000
+    );
 
     return (
         <Container>
@@ -24,7 +30,7 @@ const NavigationBar = () => {
                 <Navbar bg='light' expand='lg'>
                     <Container>
                         <NavbarBrand>B+</NavbarBrand>
-                        <Col className='col-10'>
+                        <Col className='col-8'>
                             <Container>
                                 <Nav className='md-auto'>
                                     <NavLink>Home</NavLink>
@@ -42,7 +48,7 @@ const NavigationBar = () => {
                             </NavbarCollapse>
                         </Col>
                         <Col className='col-1'>
-                            <Nav>{time}</Nav>
+                            <Nav>{time}UK</Nav>
                         </Col>
                     </Container>
                 </Navbar>
@@ -55,4 +61,5 @@ const NavigationBar = () => {
 export default NavigationBar;
 
 // TODO - Add clock in top right
+// TODO - Add scrollable text box, with fade on top and bottom?
 // TODO - Play more with the styles; learn Bootstrap
