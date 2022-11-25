@@ -1,0 +1,35 @@
+
+.navigation-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(231, 173, 153, 0.4);
+    padding: 10px;
+    box-shadow: rgba(50, 41, 47, 0.1) 0 1px 2px;
+}
+
+.navigation-brand {
+    font-family: Jamrul, serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #32292F;
+    position: relative;
+    right: 10%;
+    padding-right: 10px;
+}
+
+.nav-links-container{
+}
+
+.nav-links {
+    text-decoration: none;
+    color: #32292F;
+    padding: 5px;
+    transition: all 0.2s;
+}
+
+.nav-links:hover {
+    text-decoration: none;
+    transform: scale(2);
+    color: #CE796B;
+}

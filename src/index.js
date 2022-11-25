@@ -1,4 +1,5 @@
 
+import './index.css'
 import NavigationBar from './SharedComponents/NavigationBar';
 import React, { useState } from 'react';
 import * as ReactDom from 'react-dom/client';

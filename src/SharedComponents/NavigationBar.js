@@ -1,6 +1,6 @@
 
-
 import React, { useState } from 'react';
+import './SharedComponentsCSS/NavigationBar.css';
 
 const NavigationBar = () => {
     const [time, setTime] = useState(new Date().toTimeString().split(' ')[0]);
@@ -12,7 +12,14 @@ const NavigationBar = () => {
     );
 
     return (
-        <h1>noboot</h1>
+        <div className='navigation-bar'>
+            <span className='navigation-brand'>blus</span>
+            <div className='nav-links-container'>
+                <a href='#' className='nav-links'>Vakutter</a>
+                <a href='#' className='nav-links'>Derival</a>
+                <a href='#' className='nav-links'>Kossa</a>
+            </div>
+        </div>
     );
 }
 
