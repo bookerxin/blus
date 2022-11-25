@@ -14,11 +14,11 @@ const NavigationBar = () => {
     return (
         <div className='navigation-bar'>
             <span className='navigation-brand'>blus</span>
-            <div className='nav-links-container'>
+            <nav className='nav-links-container'>
                 <a href='#' className='nav-links'>Vakutter</a>
                 <a href='#' className='nav-links'>Derival</a>
                 <a href='#' className='nav-links'>Kossa</a>
-            </div>
+            </nav>
         </div>
     );
 }
